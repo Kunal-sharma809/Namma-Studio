@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 0px 1.5rem;
+    background-color: #e4e4e4;
+}
+
+.font-ibm {
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.font-anton {
+    font-family: 'Anton', sans-serif;
+}
+
+.underline {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 10px;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
