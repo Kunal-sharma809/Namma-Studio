@@ -29,6 +29,7 @@ nav {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    border: 2px solid red;
     box-sizing: border-box;
 }
 
@@ -36,6 +37,7 @@ nav {
     position: fixed;
     top: 0px;
     left: 0px;
+    border: 2px solid red;
     z-index: 9999;
 }
 
@@ -61,6 +63,7 @@ nav {
     position: fixed;
     left: 0px;
     bottom: 0;
+    border: 2px solid red;
     z-index: 9999;
 }
 
@@ -87,17 +90,26 @@ nav {
 
 .home-video {
     position: relative;
-    min-height: 120vh;
+    height: 120vh;
     overflow: hidden;
     border-radius: 1.5rem;
     margin-bottom: 14rem;
+    border: 2px solid red;
 }
 
 .home-video iframe {
-    position: absolute;
+    /* position: absolute;
     top: 0;
     left: 0;
-    min-height: 100%; 
+    height: 100%; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 56.25vw; /* 16:9 ratio */
+    min-height: 100%;
+    min-width: 177.77vh;
+    transform: translate(-50%, -50%);
 }
 
 .home-intro {
@@ -105,6 +117,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid red;
 }
 
 .home-intro-container p {
@@ -121,9 +134,11 @@ nav {
 }
 
 .projects {
+    border: 2px solid red;
 }
 
 .heading {
+    border: 2px solid red;
 }
 
 .projects-container {
@@ -132,9 +147,11 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 2px solid red;
 }
 
 .playground-heading h1 {
+    border: 2px solid red;
     margin: 10rem 0px;
     font-size: clamp(2rem, 13vw, 10rem);
     letter-spacing: 0.05em;
@@ -157,6 +174,7 @@ nav {
 .projects-content img {
     width: 49%;
     border-radius: 12px;
+    border: 2px solid red;
 }
 
 @media screen and (max-width : 768px) {
@@ -176,6 +194,10 @@ nav {
 
     .projects-content img {
         width: 100%;
+    }
+
+    .home-video {
+        height: 100vh;
     }
 }
 
