@@ -13,14 +13,14 @@ body {
     font-family: 'IBM Plex Mono', monospace;
 }
 
-.font-anton {
+h1 {
     font-family: 'Anton', sans-serif;
 }
 
 .underline {
     text-decoration: underline;
     text-decoration-thickness: 3px;
-    text-underline-offset: 10px;
+    text-underline-offset: 5px;
 }
 
 .w-full {
@@ -29,4 +29,8 @@ body {
 
 .text-center {
     text-align: center;
+}
+
+.hidden {
+    display: none;
 }
