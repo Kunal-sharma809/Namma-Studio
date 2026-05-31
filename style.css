@@ -125,7 +125,7 @@ nav {
 }
 
 .projects {
-    margin-bottom: 14rem;
+    margin-bottom: 16rem;
 }
 
 .heading {
@@ -165,6 +165,7 @@ nav {
     position: relative;
     border-radius: 12px;
     overflow: hidden;
+    transition: all 0.1s linear;
 }
 
 .bg-blur {
@@ -173,6 +174,7 @@ nav {
     position: absolute;
     top: 0px;
     left: 0px;
+    transition: all 0.3s ease;
 }
 
 .listItem:hover video {
@@ -185,7 +187,7 @@ nav {
 
 .listItem:hover {
     transform: scale(0.98);
-    transition: all 0.1s linear;
+    
 }
 
 .listItem video {
@@ -195,6 +197,10 @@ nav {
     transform: translate(-50%, -50%);
     width: 80%;
     border-radius: 12px;
+}
+
+.services {
+    margin-bottom: 16rem;
 }
 
 .services-container {
@@ -209,6 +215,10 @@ nav {
     position: relative;
 }
 
+.services-container:hover .services-text-wrapper {
+    color: rgba(0, 0, 0, 0.15);
+}
+
 .services-list-item:hover .services-video-wrapper {
     display: block;
     z-index: 1;
@@ -217,6 +227,7 @@ nav {
 .services-list-item:hover .services-text-wrapper {
     display: block;
     z-index: 2;
+    color: black;
 }
 
 .services-list-item:hover .services-text-wrapper p {
@@ -235,28 +246,62 @@ nav {
     animation: reveal 0.3s ease forwards;
 }
 
-@keyframes reveal {
-  to {
-    clip-path: inset(0 0 0 0);
-  }
-}
-
 .services-text-wrapper {
     position: relative;
     width: fit-content;
     margin: auto;
+    transition: all 0.2s ease;
 }
 
 .services-text-wrapper p {
     position: absolute;
     inset: 50% -1rem auto auto;
     transform: translate(120%, -50%);
+    transition: all 0.2s ease;
 }
 
 .services-text-wrapper h1 {
     font-size: clamp(2rem, 8vw, 6rem);
     line-height: 1.1;
     letter-spacing: 0.25rem;
+}
+
+.see-all-btn {
+    margin: auto;
+    width: fit-content;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.see-all-btn svg {
+    transition: all 0.3s ease;
+}
+
+.see-all-btn:hover svg {
+    transform: translate(20%, 0%);
+}
+
+.clients {
+    margin-bottom: 16rem;
+}
+
+.clients-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.clients-list-item img {
+    height: 3.4rem;
+}
+
+@keyframes reveal {
+  to {
+    clip-path: inset(0 0 0 0);
+  }
 }
 
 @media screen and (max-width : 768px) {
@@ -281,9 +326,18 @@ nav {
     .services-list-item:hover .services-video-wrapper {
         display: none;
     }
+
+    .clients-list {
+        gap: 2.5rem;
+        justify-content: center;
+    }
+
+    .clients-list-item img {
+        height: 2rem;
+    }
 }
 
-@media (max-width : 1100px) and (min-width : 768px) {
+@media (max-width : 1280px) and (min-width : 768px) {
     .home-video, .home-intro {
         margin-bottom: 9rem;
     }
@@ -294,5 +348,14 @@ nav {
 
     .services-video-wrapper {
         width: 18rem;
+    }
+
+    .clients-list {
+        justify-content: center;
+        gap: 2.5rem;
+    }
+
+    .clients-list-item img {
+        height: 2.4rem;
     }
 }
