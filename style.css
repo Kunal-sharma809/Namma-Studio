@@ -27,6 +27,7 @@ nav {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    border: 2px solid red;
     box-sizing: border-box;
 }
 
@@ -34,6 +35,7 @@ nav {
     position: fixed;
     top: 0px;
     left: 0px;
+    border: 2px solid red;
     z-index: 9999;
 }
 
@@ -59,6 +61,7 @@ nav {
     position: fixed;
     left: 0px;
     bottom: 0;
+    border: 2px solid red;
     z-index: 9999;
 }
 
@@ -90,6 +93,7 @@ nav {
     overflow: hidden;
     border-radius: 1.5rem;
     margin-bottom: 14rem;
+    border: 2px solid red;
 }
 
 .home-video iframe {
@@ -104,6 +108,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid red;
 }
 
 .home-intro-container p {
@@ -124,6 +129,7 @@ nav {
 }
 
 .heading {
+    border: 2px solid red;
 }
 
 .projects-container {
@@ -132,9 +138,11 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 2px solid red;
 }
 
 .playground-heading h1 {
+    border: 2px solid red;
     margin: 10rem 0px;
     font-size: clamp(2rem, 13vw, 10rem);
     letter-spacing: 0.05rem;
@@ -192,6 +200,7 @@ nav {
 .services-container {
     margin: 7rem 0px;
     min-height: 100vh;
+    border: 2px solid red;
     display: flex;
     justify-content: center;
 }
@@ -208,6 +217,10 @@ nav {
 .services-list-item:hover .services-text-wrapper {
     display: block;
     z-index: 2;
+}
+
+.services-list-item:hover .services-text-wrapper p {
+    display: block;
 }
 
 .services-video-wrapper {
