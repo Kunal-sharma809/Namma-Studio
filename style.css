@@ -290,9 +290,9 @@ nav {
 }
 
 .cta-heading h1 {
-    font-size: clamp(4rem, 8vw, 8rem);
+    font-size: clamp(2.5rem, 8vw, 8rem);
     line-height: 1.1;
-    letter-spacing: 0.25rem;
+    letter-spacing: 0.15rem;
 }
 
 .cta-image-wrapper {
@@ -332,7 +332,7 @@ nav {
 
 @media screen and (max-width : 768px) {
 
-    .home-video, .home-intro, .services {
+    .home-video, .home-intro, .projects, .services {
         margin-bottom: 9rem;
     }
 
@@ -369,6 +369,10 @@ nav {
     .cta-content {
         margin: 0px;
         gap: 1rem;
+    }
+
+    .cta-text-wrapper {
+        font-size: 1.25rem;
     }
 }
 
