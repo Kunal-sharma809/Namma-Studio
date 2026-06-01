@@ -13,7 +13,6 @@ nav {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    border: 2px solid red;
     box-sizing: border-box;
 }
 
@@ -21,7 +20,6 @@ nav {
     position: fixed;
     top: 0px;
     left: 0px;
-    border: 2px solid red;
     z-index: 9999;
 }
 
@@ -47,7 +45,6 @@ nav {
     position: fixed;
     left: 0px;
     bottom: 0;
-    border: 2px solid red;
     z-index: 9999;
 }
 
@@ -79,7 +76,6 @@ nav {
     overflow: hidden;
     border-radius: 1.5rem;
     margin-bottom: 14rem;
-    border: 2px solid red;
 }
 
 .home-video iframe {
@@ -94,7 +90,6 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid red;
 }
 
 .home-intro-container p {
@@ -114,21 +109,15 @@ nav {
     margin-bottom: 16rem;
 }
 
-.heading {
-    border: 2px solid red;
-}
-
 .projects-container {
     min-height: 120vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid red;
 }
 
 .playground-heading h1 {
-    border: 2px solid red;
     margin: 10rem 0px;
     font-size: clamp(2rem, 13vw, 10rem);
     letter-spacing: 0.05rem;
@@ -151,7 +140,6 @@ nav {
     position: relative;
     border-radius: 1rem;
     overflow: hidden;
-    border: 2px solid red;
     transition: all 0.1s linear;
 }
 
@@ -198,7 +186,6 @@ nav {
 
 .services-content {
     margin: 7rem 0px;
-    border: 2px solid red;
     display: flex;
     justify-content: center;
 }
@@ -353,7 +340,6 @@ footer {
 
 .footer-content {
     margin-bottom: 6rem;
-    border: 2px solid red;
     display: flex;
 }
 
@@ -404,6 +390,10 @@ footer {
         width: 100%;
     }
 
+    .services-content {
+        margin: 4rem 0;
+    }
+
     .services-list-item:hover .services-video-wrapper {
         display: none;
     }
@@ -444,10 +434,15 @@ footer {
 
     .footer-content {
         flex-direction: column;
+        gap: 1.875rem;
+    }
+
+    .footer-right {
+        width: 100%;
     }
 
     .footer-logo img {
-        height: 50vh;
+        height: 40vh;
     }
 }
 
