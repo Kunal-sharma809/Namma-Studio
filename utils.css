@@ -36,3 +36,9 @@ h1 {
 .hidden {
     display: none;
 }
+
+@media screen and (max-width: 768px) {
+    .underline {
+        text-decoration: none;
+    }
+}
