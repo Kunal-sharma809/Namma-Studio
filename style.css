@@ -149,8 +149,9 @@ nav {
 .listItem {
     width: 49%;
     position: relative;
-    border-radius: 12px;
+    border-radius: 1rem;
     overflow: hidden;
+    border: 2px solid red;
     transition: all 0.1s linear;
 }
 
@@ -231,7 +232,7 @@ nav {
     top: 50%;
     left: 0%;
     transform: translate(-0%, -50%);
-    border-radius: 12px;
+    border-radius: 1rem;
     overflow: hidden;
     clip-path: inset(50% 0% 50% 0%);
     animation: reveal 0.3s ease forwards;
@@ -289,6 +290,10 @@ nav {
     height: 3.4rem;
 }
 
+.cta {
+    margin-bottom: 9rem;
+}
+
 .cta-heading h1 {
     font-size: clamp(2.5rem, 8vw, 8rem);
     line-height: 1.1;
@@ -324,6 +329,56 @@ nav {
     font-size: 1.5rem;
 }
 
+footer {
+    margin-bottom: 3rem;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+
+.footer-video-wrapper {
+    width: clamp(12rem, 15vw, 14rem);
+}
+
+.footer-video-wrapper video {
+    aspect-ratio: 210 / 126;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.footer-content {
+    margin-bottom: 6rem;
+    border: 2px solid red;
+    display: flex;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+    width: 55vw;
+}
+
+.footer-right {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+}
+
+.footer-logo {
+    margin-bottom: 3rem;
+}
+
+.footer-logo img {
+    height: 70vh;
+}
+
 @keyframes reveal {
   to {
     clip-path: inset(0 0 0 0);
@@ -332,7 +387,7 @@ nav {
 
 @media screen and (max-width : 768px) {
 
-    .home-video, .home-intro, .projects, .services {
+    .home-video, .home-intro, .projects, .services, .clients {
         margin-bottom: 9rem;
     }
 
@@ -362,6 +417,10 @@ nav {
         height: 2rem;
     }
 
+    .cta {
+        margin-bottom: 4rem;
+    }
+
     .cta-container {
         gap: 1rem;
     }
@@ -373,6 +432,22 @@ nav {
 
     .cta-text-wrapper {
         font-size: 1.25rem;
+    }
+
+    .footer-video-wrapper {
+        width: 30%;
+    }
+
+    .footer-hide-video {
+        display: none;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-logo img {
+        height: 50vh;
     }
 }
 
@@ -396,6 +471,10 @@ nav {
 
     .clients-list-item img {
         height: 2.4rem;
+    }
+
+    .cta {
+        margin-bottom: 6rem;
     }
 
     .cta-container {
