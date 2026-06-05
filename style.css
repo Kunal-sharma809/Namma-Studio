@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Antonio:wght@100..700&family=Boldonse&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto&display=swap');
 
+.mouse-follower {
+    width: 15px;
+    height: 15px;
+    position: fixed;
+    background: blue;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(150%, 150%);
+    transition: all 0.3s ease-out;
+    z-index: 9999;
+}
+
 header {
     min-height: 100vh;
 }
@@ -191,7 +203,7 @@ nav {
     justify-content: center;
 }
 
-.services-list-item {
+.services-list-item, .services-in-view {
     position: relative;
 }
 
@@ -254,6 +266,20 @@ nav {
     justify-content: center;
     cursor: pointer;
     font-size: 1rem;
+    padding: 0.5rem;
+}
+
+body:has(.hide-dot:hover) .mouse-follower {
+    pointer-events: none;
+    transform: translate(20%, 30%);
+    font-family: 'Anton', sans-serif;
+    background-color: blue;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    width: fit-content;
+    height: 50px;
 }
 
 .see-all-btn svg {
@@ -360,10 +386,11 @@ footer {
 
 .footer-logo {
     margin-bottom: 3rem;
+    height: 0;
 }
 
 .footer-logo img {
-    height: 70vh;
+    height: 100%;
 }
 
 @keyframes reveal {
@@ -385,7 +412,7 @@ footer {
         display: none;
     }
 
-    .hero {
+    .hero, header {
         min-height: 80vh;
     }
 
@@ -477,7 +504,7 @@ footer {
         width: 100%;
     }
 
-    .footer-logo img {
+    .footer-logo {
         height: 40vh;
     }
 }
