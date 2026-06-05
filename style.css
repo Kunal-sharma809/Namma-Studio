@@ -12,6 +12,19 @@
     z-index: 9999;
 }
 
+body:has(.hide-dot:hover) .mouse-follower {
+    width: fit-content;
+    height: 50px;
+    font-family: 'Anton', sans-serif;
+    background-color: blue;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    pointer-events: none;
+    transform: translate(20%, 30%) rotate(-8deg);
+}
+
 header {
     min-height: 100vh;
 }
@@ -131,8 +144,11 @@ nav {
     align-items: center;
 }
 
-.playground-heading h1 {
+.playground-heading {
     margin: 10rem 0px;
+}
+
+.playground-heading h1 {
     font-size: clamp(2rem, 13vw, 10rem);
     letter-spacing: 0.05rem;
     text-align: center;
@@ -269,19 +285,6 @@ nav {
     padding: 0.5rem;
 }
 
-body:has(.hide-dot:hover) .mouse-follower {
-    pointer-events: none;
-    transform: translate(20%, 30%);
-    font-family: 'Anton', sans-serif;
-    background-color: blue;
-    color: white;
-    padding: 0.5rem 1rem;
-    font-size: 1.5rem;
-    border-radius: 0.5rem;
-    width: fit-content;
-    height: 50px;
-}
-
 .see-all-btn svg {
     transition: all 0.3s ease;
 }
@@ -386,7 +389,7 @@ footer {
 
 .footer-logo {
     margin-bottom: 3rem;
-    height: 0;
+    height: 70vh;
 }
 
 .footer-logo img {
@@ -424,7 +427,7 @@ footer {
         margin-bottom: 9rem;
     }
 
-    .playground-heading h1 {
+    .playground-heading {
         margin: 4rem 0px;
     }
 
@@ -526,7 +529,7 @@ footer {
         margin-bottom: 9rem;
     }
 
-    .playground-heading h1 {
+    .playground-heading {
         margin: 6rem 0px;
     }
 

@@ -1,4 +1,4 @@
-// Center card will have hover effects 
+// Center card will have hover effects : for mobile 
 const cards = document.querySelectorAll('.project-card');
 const serviceCards = document.querySelectorAll('.services-card');
 const servicesContent = document.querySelector('.services-content');
@@ -51,6 +51,7 @@ document.addEventListener("mousemove", (e) => {
   mouseFollower.style.top = e.clientY + "px";
 });
 
+
 // Hidden Tablets
 let hiddenTabs = document.querySelectorAll(".hide-dot");
 hiddenTabs.forEach((hiddenTablet) => {
@@ -64,3 +65,21 @@ hiddenTabs.forEach((hiddenTablet) => {
     mouseFollower.innerText = "";
   })
 });
+
+
+// Update Time according to place
+let updateClock = () => {
+    const options = {
+        timeZone: 'Asia/Kolkata',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false
+    };
+
+    const time = new Date().toLocaleTimeString('en-IN', options);
+    document.getElementById('clock').textContent = time;
+}
+
+updateClock();
+setInterval(updateClock, 100);

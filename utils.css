@@ -37,6 +37,10 @@ h1 {
     display: none;
 }
 
+.custom-cursor:hover  {
+    cursor: url('./assets/cursor.svg'), auto;
+}
+
 @media screen and (max-width: 768px) {
     .underline {
         text-decoration: none;
