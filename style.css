@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Antonio:wght@100..700&family=Boldonse&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto&display=swap');
 
+#intro-video {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+}
+
 .mouse-follower {
     width: 15px;
     height: 15px;

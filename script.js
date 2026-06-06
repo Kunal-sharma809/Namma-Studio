@@ -1,3 +1,14 @@
+// OnLoad Video 
+const introVideo = document.querySelector("#intro-video");
+const home = document.querySelector("#home");
+introVideo.addEventListener("ended", (e) => {
+  introVideo.style.display = "none";
+  home.classList.remove("hidden");
+
+  document.body.style.overflow = "auto";
+});
+
+
 // Center card will have hover effects : for mobile 
 const cards = document.querySelectorAll('.project-card');
 const serviceCards = document.querySelectorAll('.services-card');
