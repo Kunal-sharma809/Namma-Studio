@@ -70,7 +70,7 @@ hiddenTabs.forEach((hiddenTablet) => {
 // Update Time according to place
 let updateClock = () => {
     const options = {
-        timeZone: 'Asia/Kolkata',
+        timeZone: 'Europe/Paris',
         hour: '2-digit',
         minute: '2-digit',
         second: '2-digit',
@@ -83,3 +83,48 @@ let updateClock = () => {
 
 updateClock();
 setInterval(updateClock, 100);
+
+
+// Hover Images on "Detail and Playground"
+// let detail = document.querySelector(".is-first");
+// let hoverImgsCont = document.querySelector(".home-intro-visuals");
+
+let hoverWrapper = document.querySelectorAll(".hover-wrapper");
+
+let interval;
+
+hoverWrapper.forEach((hoverCont) => {
+
+  hoverCont.addEventListener("mouseenter", (e) => {
+    let idx = 0;
+
+    let hoverImgs = hoverCont.querySelectorAll(".home-intro-visuals img");
+    interval = setInterval(() => {
+      hoverImgs.forEach((img) => {
+        img.style.opacity = 0;
+        img.style.transform = "translate(-50%, 0%)";
+      });
+  
+      let rotate = Math.floor(Math.random() * 11) - 5;
+      hoverImgs[idx].style.opacity = 1;
+      hoverImgs[idx++].style.transform = `translate(-50%, -50%) rotate(${rotate}deg)`;
+  
+      if(idx == hoverImgs.length) idx = 0;
+    }, 300);
+  });
+})
+
+hoverWrapper.forEach((hoverCont) => {
+
+  hoverCont.addEventListener("mouseleave", (e) => {
+
+    let hoverImgs = hoverCont.querySelectorAll(".home-intro-visuals img");
+    hoverImgs.forEach((img) => {
+      img.style.opacity = 0;
+      img.style.transform = "translate(-50%, 0%)";
+    });
+
+    clearInterval(interval);
+  });
+
+});

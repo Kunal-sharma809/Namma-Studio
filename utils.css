@@ -15,7 +15,7 @@ body {
     font-family: 'IBM Plex Mono', monospace;
 }
 
-h1 {
+h1, .font-anton {
     font-family: 'Anton', sans-serif;
 }
 

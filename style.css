@@ -132,6 +132,36 @@ nav {
     text-align: center;
 }
 
+.hover-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.home-intro-visuals {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.home-intro-visuals img {
+    position: absolute;
+    max-height: 40vh;
+    max-width: 20vw;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    
+    object-fit: contain;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.2s ease-out;
+}
+
 .projects {
     margin-bottom: 16rem;
 }
